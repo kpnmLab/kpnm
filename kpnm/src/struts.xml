@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring"></constant>  
+	<constant name="struts.multipart.maxSize" value="10701096"/>
+	<package name="struts2" namespace="/" extends="struts-default">
+	
+	    <!-- 获取首页数据 -->
+	    <action name="main" class="mainAction" method="mainmethod">
+	    	<result name="ch">/main.jsp</result>
+	    	<result name="en">/main_en.jsp</result>
+	    </action>
+	    <!-- 更多新闻 -->
+	    <action name="morenews" class="mainAction" method="morenews">
+	    	<result name="ch">/morenews.jsp</result>
+	    	<result name="en">/morenews_en.jsp</result>
+	    </action>
+	    
+	    <!-- 获取详细新闻数据 -->
+	     <action name="detailnews" class="newsAction" method="detailnews">
+	    	<result name="ch">/detailnews.jsp</result>
+	    	<result name="en">/detailnews_en.jsp</result>
+	    </action>
+	    
+	    <!-- 后台实验室管理 -->
+	    <action name="*labm" class="newsAction" method="{1}">
+	    	<result name="backnm">/backnm.jsp</result>
+	    	<result name="edit">/editnews.jsp</result>
+	    	<result name="publish" type="redirectAction">backnmlabm</result>
+	    	<result name="precreatenews">/createnews.jsp</result>
+	    	<result name="cnews" type="redirectAction">backnmlabm</result>
+	    </action>
+	    
+	    <!-- 实验室概况 -->
+	    <action name="*lab" class="labAction" method="{1}">
+	        <result name="labsituationch">/labsituation.jsp</result>
+	        <result name="labsituationen">/labsituation_en.jsp</result>
+	        <result name="systemmanagech">/systemmanage.jsp</result>
+	        <result name="systemmanageen">/systemmanage_en.jsp</result>
+	        <result name="backdefault">/backdefault.jsp</result>
+	        <result name="backsysjj">/backsysjj.jsp</result>
+	        <result name="backxswyh">/backxswyh.jsp</result>
+	        <result name="backjgsz">/backjgsz.jsp</result>
+	        <result name="backzdgl">/backzdgl.jsp</result>
+	        <result name="backkfjj">/backkfjj.jsp</result>
+	        <result name="backyjfx">/backyjfx.jsp</result>
+	        <result name="createzd">/createzd.jsp</result>
+	        <result name="editsystem">/editsystem.jsp</result>
+	        <result name="csystem" type="redirectAction">backzdgllab</result>
+	    </action>
+	    
+	     <!-- 研究队伍 -->
+	     <action name="*team" class="researchTeamAction" method="{1}">
+	        <result name="ch">/researchteam.jsp</result>
+	        <result name="en">/researchteam_en.jsp</result>
+	        <result name="postgraduatech">/postgraduate.jsp</result>
+	        <result name="postgraduateen">/postgraduate_en.jsp</result>
+	        <result name="teacherhomech">/teacherhome.jsp</result>
+	        <result name="teacherhomeen">/teacherhome_en.jsp</result>
+	        
+	        <result name="backrteam">/backrteam.jsp</result>
+	        <result name="precreatrt">/precreatrt.jsp</result>
+	        <result name="editrt">/editrtinfo.jsp</result>
+	        
+	        <result name="createleader" type="redirectAction">backleaderteam</result>
+	        <result name="createfulltime" type="redirectAction">backfulltimeteam</result>
+	        <result name="createparttime" type="redirectAction">backparttimeteam</result>
+	        <result name="createvisiting" type="redirectAction">backvisitingteam</result>
+	      </action>
+	     
+	      
+	      
+	      <!-- 科学研究 -->
+	      <action name="*sr" class="scienceResearchAction" method="{1}">
+	      	<result name="ch">/scienceresearch.jsp</result>
+	      	<result name="en">/scienceresearch_en.jsp</result>
+	      	<result name="projectch">/researchproject.jsp</result>
+	      	<result name="projecten">/researchproject_en.jsp</result>
+	      	<result name="kyxm">/backkyxm.jsp</result>
+	      </action>
+	      
+	      <!-- 成果论著 -->
+	      <action name="*achi" class="achievementAction" method="{1}">
+	      	<result name="paperch">/paper.jsp</result>
+	      	<result name="paperen">/paper_en.jsp</result>
+	      	<result name="researchch">/researchachi.jsp</result>
+	      	<result name="researchen">/researchachi_en.jsp</result>
+	      	<result name="patentch">/patentachi.jsp</result>
+	      	<result name="patenten">/patentachi_en.jsp</result>
+	      	<result name="swcopyrightch">/swcopyright.jsp</result>
+	      	<result name="swcopyrighten">/swcopyright_en.jsp</result>
+	      	<result name="softwarepch">/softwarep.jsp</result>
+	      	<result name="softwarepen">/softwarep_en.jsp</result>
+	      	<result name="rapaper">/backresearch.jsp</result>
+	      	<result name="rakyzx">/backkyzx.jsp</result>
+	      	<result name="razlcg">/backkzlcg.jsp</result>
+	      	<result name="rjcp">/backrjcp.jsp</result>
+	      	<result name="rjzzq">/backrjzzq.jsp</result>
+	      	<result name="createzjcp">/createrjcp.jsp</result>
+	      	<result name="editrjcp">/editrjcp.jsp</result>
+	      	<result name="crjcping" type="redirectAction">rjcpachi</result>
+	      </action>
+	      
+	      
+	</package>
+	
+	<package name="json" extends="json-default">  
+		<!-- 登录验证用户填写信息 --> 
+        <action name="*img" class="pictureAction" method="{1}">  
+                 <result type="json" ></result>  
+        </action>  
+        <!-- 更新实验室信息内容 -->
+        <action name="updatelc" class="labAction" method="updatelc">  
+                 <result type="json" ></result>  
+        </action>  
+        <!-- 更新实验室信息内容 -->
+        <action name="updatenews" class="newsAction" method="updatenews">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 删除新闻-->
+        <action name="deletenews" class="newsAction" method="deletenews">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 删除研究员-->
+        <action name="deletert" class="researchTeamAction" method="deletert">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 改变研究队伍显示顺序-->
+        <action name="changertsort" class="researchTeamAction" method="changertsort">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 更改研究员基本信息-->
+        <action name="savebasicinfo" class="researchTeamAction" method="savebasicinfo">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 更改研究员基本信息-->
+        <action name="editrtinfo" class="researchTeamAction" method="editrtinfo">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 更改制度管理-->
+        <action name="editzd" class="labAction" method="editzd">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 删除制度管理-->
+        <action name="deletezd" class="labAction" method="deletezd">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 新建论著-->
+        <action name="creatcp" class="achievementAction" method="creatcp">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 删除论著-->
+        <action name="deletecp" class="achievementAction" method="deletecp">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 新建科研专项-->
+        <action name="creatkyzx" class="achievementAction" method="creatkyzx">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 删除科研专项-->
+        <action name="deletekyzx" class="achievementAction" method="deletekyzx">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 新建专利成果-->
+        <action name="creatzlcg" class="achievementAction" method="creatzlcg">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 删除专利成果-->
+        <action name="deletezlcg" class="achievementAction" method="deletezlcg">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 删除软件产品-->
+        <action name="deleterjcp" class="achievementAction" method="deleterjcp">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 修改软件产品-->
+        <action name="saverjcp" class="achievementAction" method="saverjcp">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 创建软件著作权-->
+        <action name="creatrjzzq" class="achievementAction" method="creatrjzzq">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 删除软件著作权-->
+        <action name="deleterjzzq" class="achievementAction" method="deleterjzzq">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 创建科研项目-->
+        <action name="creatkyxm" class="scienceResearchAction" method="creatkyxm">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 删除科研项目-->
+        <action name="deletekyxm" class="scienceResearchAction" method="deletekyxm">  
+                 <result type="json" ></result>  
+        </action> 
+         <!-- 删除科研项目-->
+        <action name="changeversion" class="basicAction" method="changeversion">  
+                 <result type="json" ></result>  
+        </action> 
+    </package>
+</struts>    

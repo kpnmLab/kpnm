@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="dataSource"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/kpnm?characterEncoding=gbk">
+		</property>
+		<property name="user" value="root"></property>
+		<property name="password" value="396462"></property>
+		 <!-- 指定连接池的最小连接数 -->
+		<property name="minPoolSize"><value>1</value></property>
+		<!-- 指定连接池的最大连接数-->
+		<property name="maxPoolSize"><value>10000</value></property>
+		<!-- 指定连接池的最大空闲时间 -->
+		<property name="maxIdleTime"><value>1800</value></property>
+		<property name="acquireIncrement"><value>2</value></property>
+		<property name="maxStatements"><value>0</value></property>
+		 <!-- 指定连接池的初始化连接数 -->
+		<property name="initialPoolSize"><value>1</value></property>
+		<property name="idleConnectionTestPeriod"><value>1000</value></property>
+		<property name="acquireRetryAttempts"><value>30</value></property>
+		<property name="acquireRetryDelay"><value>100</value></property>
+		<property name="breakAfterAcquireFailure"><value>false</value></property>
+		<property name="testConnectionOnCheckout"><value>false</value></property>
+	</bean>
+	
+	<!--class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"  -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>  
+                <prop key="hibernate.format_sql">true</prop> 
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+			<value>org/hnust/cn/pojo/Links.hbm.xml</value>
+			<value>org/hnust/cn/pojo/SlidePicture.hbm.xml</value>
+			<value>org/hnust/cn/pojo/LabNews.hbm.xml</value>
+			<value>org/hnust/cn/pojo/Teacher.hbm.xml</value>
+			<value>org/hnust/cn/pojo/HotNews.hbm.xml</value></list>
+			</property>
+	</bean>
+
+	<!-- 声明事务管理器 -->
+	<bean id="myHibernateManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- 所有的Action均继承该基本Action 用于获取重复的信息 -->
+	<bean id="basicAction" class="org.hnust.cn.action.BasicAction"/>
+	
+	<!-- 主页业务处理 -->
+	<bean id="mainDao" class="org.hnust.cn.dao.impl.MainDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="mainTran" class="org.hnust.cn.tran.MainTran">
+		<property name="maindao" ref="mainDao"/>
+	</bean>
+	<bean id="mainAction" class="org.hnust.cn.action.MainAction">
+		<property name="maintran" ref="mainTran"/>
+	</bean>
+	
+	<!-- 关于新闻的业务处理 -->
+	<bean id="newsDao" class="org.hnust.cn.dao.impl.NewsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="newsTran" class="org.hnust.cn.tran.NewsTran">
+		<property name="newsdao" ref="newsDao"/>
+	</bean>
+	<bean id="newsAction" class="org.hnust.cn.action.NewsAction">
+		<property name="maintran" ref="mainTran"/>
+		<property name="newstran" ref="newsTran"/>
+	</bean>
+	
+	<!-- 关于实验室概况的业务处理 -->
+	<bean id="labDao" class="org.hnust.cn.dao.impl.LabDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="labTran" class="org.hnust.cn.tran.LabTran">
+		<property name="labdao" ref="labDao"/>
+	</bean>
+	<bean id="labAction" class="org.hnust.cn.action.LabAction">
+		<property name="maintran" ref="mainTran"/>
+		<property name="labtran" ref="labTran"/>
+	</bean>
+	
+	<!-- 关于研究队伍的业务处理 -->
+	<bean id="ResearchTeamDao" class="org.hnust.cn.dao.impl.ResearchTeamDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="ResearchTeamTran" class="org.hnust.cn.tran.ResearchTeamTran">
+		<property name="rtd" ref="ResearchTeamDao"/>
+	</bean>
+	<bean id="researchTeamAction" class="org.hnust.cn.action.ResearchTeamAction">
+		<property name="maintran" ref="mainTran"/>
+		<property name="rttran" ref="ResearchTeamTran"/>
+	</bean>
+	
+	<!-- 关于科学研究的业务处理 -->
+	<bean id="scienceResearchDao" class="org.hnust.cn.dao.impl.ScienceResearchDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="scienceResearchTran" class="org.hnust.cn.tran.ScienceResearchTran">
+		<property name="srdao" ref="scienceResearchDao"/>
+	</bean>
+	<bean id="scienceResearchAction" class="org.hnust.cn.action.ScienceResearchAction">
+		<property name="maintran" ref="mainTran"/>
+		<property name="srtran" ref="scienceResearchTran"/>
+	</bean>
+	
+	<!-- 关于成果论著的业务处理 -->
+	<bean id="achievementDao" class="org.hnust.cn.dao.impl.AchievementDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="achievementTran" class="org.hnust.cn.tran.AchievementTran">
+		<property name="srdao" ref="achievementDao"/>
+	</bean>
+	<bean id="achievementAction" class="org.hnust.cn.action.AchievementAction">
+		<property name="maintran" ref="mainTran"/>
+		<property name="atran" ref="achievementTran"/>
+	</bean>
+	
+	<!-- 编辑器上传图片 -->
+	<bean id="pictureAction" class="org.hnust.cn.action.PictureAction">
+	</bean>
+	
+	</beans>

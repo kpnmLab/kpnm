@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+	<table name="links" catalog="kpnm"
+		class="org.hnust.cn.pojo.Links">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="slidepicture" catalog="kpnm"
+		class="org.hnust.cn.pojo.SlidePicture">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="labnews" catalog="kpnm"
+		class="org.hnust.cn.pojo.LabNews">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+
+	<table name="student" catalog="kpnm"
+		class="org.hnust.cn.pojo.Teacher">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="teacher" catalog="kpnm"
+		class="org.hnust.cn.pojo.Teacher">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+<table name="hotnews" catalog="kpnm"
+	class="org.hnust.cn.pojo.HotNews">
+	<primary-key>
+		<generator class="native"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

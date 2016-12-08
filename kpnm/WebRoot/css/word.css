@@ -1,0 +1,35 @@
+.img-indent { 
+	margin:0 20px 0 0; 
+	float:left;
+	}
+.inside{
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-bottom:1px solid #e7e8e8;
+	padding-bottom:20px;
+	margin-bottom:35px;
+
+}
+h4 {
+	font-size:15px;
+	line-height:17px;
+	font-weight:normal;
+	color:#2b3755;
+	font-family:ËÎÌå£»
+	margin-bottom:1em;
+	}
+h2 {
+	font-size:24px;
+	line-height:1.2em;
+	color:#353535;
+	font-weight:normal;
+	margin-bottom:.7em;
+	letter-spacing:-1px;
+	}
+.wrapper { 
+	width:100%;
+	overflow:hidden;
+}

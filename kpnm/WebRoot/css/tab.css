@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tabPanel, .tabPanel ul,.tabPanel div{margin:0;padding:0;word-wrap:break-word;word-break:break-all;}
+.tabPanel{
+	margin-top:3px;
+	text-align:left
+}
+img{border:0px;behavior:url("css/pngbehavior.htc");display:inline;}
+
+
+/**tabs**/
+.tabPanel ul{height:30px;
+border-bottom:1px solid rgba(32, 89, 50, 0.9);}
+.tabPanel ul li{
+	float:left;
+	margin:0 2px 0 0;
+	border:1px solid rgba(221, 212, 212, 1);
+	border-bottom:1px solid rgba(32, 89, 50, 0.9);
+	font-size:13px;
+	height:29px;
+	line-height:30px;
+	width:146px;
+	text-align:center;
+	cursor:pointer;
+	text-shadow:0 1px 0 #fff;
+	box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.5);
+	background:#ddd;
+	background:-moz-linear-gradient(top, #eee, rgba(234, 234, 234, 1));
+	background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd));
+}
+.tabPanel .hit{
+	border:1px solid rgba(32, 89, 50, 0.9);
+	border-bottom:1px solid #fff;
+	cursor:pointer;
+	font-weight:bold;
+	color:rgba(29, 82, 135, 0.9);
+	text-shadow:0 1px 0 #fff;
+	background:#fff;
+	background:-webkit-gradient(linear, left top, left bottom, from(#e1e1e1), to(#fff));
+	background:-moz-linear-gradient(top, #e1e1e1, #fff);
+}
+.pane{
+	border-top:0;
+	min-height:100px;
+	background-color:#fff;
+	display:none;
+	width:96%;
+	text-align: left;
+	}

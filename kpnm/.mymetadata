@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="kpnm"
+  id="myeclipse.1451648022284"
+  context-root="/kpnm"
+  j2ee-spec="5.0"
+  archive="kpnm.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

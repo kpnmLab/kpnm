@@ -1,0 +1,142 @@
+.jbxia{
+	width: 90%;
+	margin-top: 20px;
+	border-style:double;
+	text-align: left;
+}
+.sysjj{
+	width: 90%;
+	margin-top: 30px;
+	border-style:double;
+	text-align: left;
+}
+#jbxximg{
+	height: 28px;
+}
+.s1,.s2{
+	font-size: 17px;
+	vertical-align: super;
+}
+hr{
+	FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15);
+	width: 100%;
+}
+.jbxib{
+	border:1px solid #d1d1d1;
+	width: 89%;
+	padding: 4px
+}
+.jb1div{
+	width: 58%;
+	float: left;
+}
+.jb1div ul li{
+	line-height: 34px;
+	text-align: left;
+	list-style: url("") inside katakana-iroha;
+	list-style-type: 
+}
+
+.jb2div{
+	width: 40%;
+	float: right;
+	text-align: left;
+}
+.jbimg{
+	text-align: center;
+	margin: 6px;
+}
+.jbimg img{
+	width: 240px;
+}
+.s1 a,#ghzp,#zwbbxg,#ywbbxg,#savecontent{color:#464646;}
+.s1 a:hover,#ghzp:hover,#zwbbxg:hover,#ywbbxg:hover,#savecontent:hover{color:#00a5a5;}
+.sysms{
+	border:1px solid #d1d1d1;
+	width: 89%;
+	margin-top:15px;
+	text-align: left;
+	padding: 4px;
+	list-style:none;
+	
+}
+
+.sysms ol li{
+	list-style: decimal;
+}
+
+.sysms ul li{
+	list-style: disc;
+}
+.sysms table{
+	text-align: center;
+}
+.editpane{
+	width: 89.7%;
+	margin-top:10px;
+	text-align: left;
+	
+}
+.biaozhi{
+	width: 100%;
+	height: 30px;
+	border:1px solid lightgray;
+	line-height: 30px;
+	font-weight: bold;
+	background: #E1E6E4;
+}
+#chinese{
+	float: left;
+	width: 47%;
+}
+#english{
+	width: 47%;
+	float: right;
+	margin-left: 5%;
+}
+#chinese a,#english a,#savecontent{
+	float: right
+}
+.ct,.et{
+	height: 30px;
+	line-height: 30px;
+	background: rgba(137, 238, 223, 0.06);
+}
+.titlepser{
+	margin-bottom:6px;
+	border: 1px solid rgb(234, 208, 208);
+	margin-top: 4px;
+}
+.titlepser .t{
+	line-height: 30px;
+	width: 100%;
+}
+.titlepser .t input{
+	width: 76%;
+	padding: 2px;
+	line-height: 20px;
+	font-size: 13px;
+}
+#savecn,#publiccn{
+	border:1px solid lightgray;
+	padding:2px 12px;
+	background: rgb(133, 143, 146);
+	color:#fff;
+	cursor:pointer;
+}
+#savecn:hover,#publiccn:hover{
+	background: #454444 ;
+} 
+
+
+
+
+.b1,.b2,.b3,.b4,.b1b,.b2b,.b3b,.b4b,.b{display:block;overflow:hidden;}
+.b1,.b2,.b3,.b1b,.b2b,.b3b{height:1px;}
+.b2,.b3,.b4,.b2b,.b3b,.b4b,.b{border-left:1px solid gray;border-right:1px solid gray;}
+.b1,.b1b{margin:0 5px;background:white;}
+.b2,.b2b{margin:0 3px;border-width:2px;}
+.b3,.b3b{margin:0 2px;}
+.b4,.b4b{height:2px;margin:0 1px;}
+.d1{background:#F7F8F9;}
+

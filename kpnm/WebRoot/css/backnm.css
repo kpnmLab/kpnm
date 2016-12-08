@@ -1,0 +1,123 @@
+.htitle{
+	height: 30px;
+	width: 90%;
+	margin-top: 10px;
+}
+.nbody{
+	width:90%;
+	min-height: 400px;
+	margin-top: 6px;
+	text-align: center;
+}
+.ht2{
+	width:320px;
+	border:1px solid lightgray;
+	float: right;
+	line-height: 28px;
+	text-align: right;
+	background: rgb(216, 216, 216);
+}
+#aaa{
+	text-decoration: none;
+	height: 20px;
+	width: 40px;
+	padding:2px 4px;
+	color:rgba(12, 11, 11, 0.82);
+	background: rgba(181, 178, 178, 0.48);
+	border: 1px soild gray;
+	margin-right:6px;
+}
+#aaa:hover{
+	background: gray;
+	color: #fff;
+}
+.ht1{
+	width:280px;
+	border:1px solid lightgray;
+	float: left;
+	line-height: 28px;
+	text-align: center;
+	background: rgb(216, 216, 216);
+	font-weight: bold;
+	cursor: pointer;
+	color: rgb(70, 81, 75);
+}
+.ht1:hover{
+	background: #8EA4A4;
+	color: #fff;
+}
+.ntable{
+	width: 100%;
+}
+.ntable th{
+	font-size: 13px;
+}
+.ntable td{
+	text-align: center;
+	font-size: 13px;
+	color: #000;
+	padding:2px;
+	line-height: 22px;
+}
+.nt{
+	text-decoration: none;
+	color:#000;
+}
+.nt:HOVER {
+	text-decoration: underline;
+	color: red;
+}
+.cz{
+	text-decoration: none;
+	padding:4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: rgba(126, 129, 129, 0.39);
+	color: rgba(34, 81, 51, 0.8);
+	border: 1px solid black;
+	font-size:13px;
+}
+.czno{
+	text-decoration: none;
+	padding:4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: rgb(213, 213, 213);
+	color: gray;
+	border: 1px solid black;
+	font-size:13px;
+}
+.cz:HOVER {
+	color:#000;
+	background: gray;
+}
+.newspage{
+	width: 89%;
+	text-align: right;
+	padding-right: 10px;
+	line-height: 40px;
+	height: 40px;
+	background: rgb(216, 216, 216);
+	
+}
+.newspage a:hover{
+	text-decoration: underline;
+}
+#bbb{
+	margin-left: 10px;
+	margin-right: 23px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

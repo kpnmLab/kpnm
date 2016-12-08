@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>uppicture.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<link href="css/box_style.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery.XYTipsWindow.min.2.8.js"></script>
+	
+	<script type="text/javascript">
+		$(function()
+		{
+		
+			$("#zwbbxg").click(function()
+			{
+				$.XYTipsWindow
+				({
+					___title:"上传一张帅帅美美的个人头像吧~",
+					___content:"kjhkjhkjh",
+					___width:"350",
+					___height:"175",
+					___showbg:true,
+					___drag:"___boxTitle"
+				});
+				
+				return false;
+			});
+		});
+	</script>
+  </head>
+  
+  <body>
+    <a id="zwbbxg" href="javascript:void(0)">上传头像</a>
+  </body>
+</html>

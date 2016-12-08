@@ -1,0 +1,4 @@
+#Tue Dec 06 22:36:51 CST 2016
+eclipse.preferences.version=1
+validator.Checked=src/applicationContext.xml,src/org/hnust/cn/util/LangUtil.java,WebRoot
+validator.Unchecked=

@@ -1,0 +1,162 @@
+.researchteam{
+	height: 180px;
+	width: 96%;
+	border: 1px solid rgba(111,166,143,0.65);
+	margin-top: 15px;
+}
+.menname{
+	height: 28px;
+	line-height:26px;
+	font-size:16px;
+	font-weight:bold;
+	background:rgba(219, 227, 244, 0.24);
+	border-bottom: 1px solid rgba(111,166,143,0.65);
+}
+.menname a{
+	text-decoration: none;
+	color:rgb(1, 93, 93);
+}
+.menname a:HOVER{
+	text-decoration: underline;
+	color: gray;
+}
+.news a{
+	line-height: 20px;
+	color:#000;
+	text-decoration: none;
+	margin-left: 2px;
+}
+.news a:hover{
+	text-decoration: underline;
+	color: #ff0000;
+}
+.menimg{
+	width: 100%;
+	height: 100%;
+}
+.menpicture{
+	width: 111px;
+	height: 151px;
+	float: left;
+}
+.fenge{
+	width: 2px;
+	height: 110px;
+	margin-left:10px;
+	border-right: 1px solid rgba(111,166,143,0.65);
+	float: left;
+	margin-top: 20px;
+}
+.menintroduce{
+	width: 76%;
+	height: 140px;
+	float: left;
+	margin-left: 14px;
+	padding: 2px;
+	margin-top:14px;
+	font-size: 14px;
+	line-height: 21px;
+	text-indent:24px;
+	font-family: "����";
+	text-align:justify;
+	text-justify:inter-ideograph;
+	color: rgba(12, 11, 11, 0.82);
+	overflow: hidden;
+	letter-spacing:1px;
+}
+
+.search{
+	height: 30px;
+	width: 330px;
+	line-height: 30px;
+	text-align: left;
+	font-size: 14px;
+	color: rgba(12, 11, 11, 0.82);
+	text-align: right;
+	margin-left: 282px;
+	background: rgba(1, 93, 93, 0.06)
+}
+.search select{
+	width: auto;
+	height: 22px;
+	font-size: 14px;
+	color: rgba(12, 11, 11, 0.82);
+	padding-right: 5px;
+}
+.search a{
+	text-decoration: none;
+	height: 20px;
+	width: 40px;
+	padding:2px 4px;
+	color:rgba(12, 11, 11, 0.82);
+	background: rgba(181, 178, 178, 0.48);
+	border: 1px soild gray;
+	margin-right:6px;
+}
+.search a:hover{
+	background: gray;
+	color: #fff;
+}
+.searchcondition{
+	
+}
+.biaoti{
+	width: 96%;
+	margin-top: 25px;
+	height: 29px;
+	font-size: 14px;
+	color:#fff;
+	text-align: center;
+	background: rgb(76, 107, 107);
+	font-weight: bolder;
+}
+.news{
+	width: 96%;
+	margin-top: 25px;
+	font-size: 14px;
+	text-align: center;
+}
+.newspage{
+	width: 96%;
+	margin-top: 15px;
+	font-size: 13px;
+	text-align: right;
+	line-height: 30px;
+	color: #4E4B4B;
+}
+.newspage a{
+	text-decoration: none;
+	color:rgb(1, 93, 93);
+}
+.newspage a:hover{
+	color: #582222;
+}
+.newspage span{
+	margin-left:10px;
+}
+.items{
+	width: 96%;
+	margin-top: 10px;
+	font-size: 13px;
+	text-align: center;
+}
+.items td{
+	border: 1px solid rgba(76, 107, 107, 0.32);
+	padding:2px;
+	margin: 0px;
+	color: rgba(12, 11, 11, 0.82);
+	
+}
+
+.stuinfo{
+	width: 100%;
+	height: 29px;
+	font-size: 14px;
+	color:rgba(1, 93, 93, 0.70);
+	text-align: center;
+}
+
+
+
+
+

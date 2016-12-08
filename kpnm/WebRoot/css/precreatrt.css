@@ -1,0 +1,28 @@
+.btinfo{
+	height: auto;
+	border:1px solid #C8C8C8;
+	width: 90%;
+}
+.btinfo .bt1{
+	height: 30px;
+	border-top:1px solid #C8C8C8;
+	text-align: left;
+	line-height: 30px;
+	padding: 3px;
+}
+.btinfo input{
+	width: 250px;
+	line-height: 20px;
+	padding: 2px;
+}
+#savebasicinfo{
+	border:1px solid lightgray;
+	padding:2px 12px;
+	background: rgba(157, 158, 141, 0.54);
+	color:#01683C;
+	cursor:pointer;
+}
+#savebasicinfo:hover{
+	background: #454444 ;
+	color: #fff;
+} 

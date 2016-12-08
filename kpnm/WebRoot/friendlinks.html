@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>friendlinks.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <div style="border:1px solid rgb(143, 169, 230);width: 100%">
+		    	   				<div class="upleft1">
+		    	   					<%@include file="nivo_slide.html" %>
+		    	   				</div>
+		    	   				<div class="upleft2">
+		    	   					热点新闻
+		    	   				</div>
+	    	   				</div>
+	    	   				<div class="downleft">
+	    	   				    <b class="b1"></b><b class="b2 d1" style="border-top: 1px solid rgb(143, 169, 230)"></b><b class="b3 d1"></b><b class="b4 d1"></b>
+					 			   <div class="b d1 k" style="background: rgb(250, 250, 250);">
+										<div id="kslj" style="height: 30px;text-align: left;line-height:30px;background: rgb(224, 230, 240);padding-left: 10px">
+										<span style="font-size: 14px;margin-right: 14px;">滚动新闻<a href="morenews?fnindex=0" style="color: #776D6D;text-decoration: none;margin-left: 55%">more>></a></span>
+										</div>
+										
+										<div id="gundong" onmouseover="clearscroll();" onmouseout="continuescroll();">
+											<s:iterator value="newslist" status="L">
+												<div id="dn<s:property value='#L.index+1'/>" style="width:98.5%;height:auto;text-align:left;padding: 2px;margin-top:12px;color:#717171;display:block">
+					    							<a href="detailnews?newsid=<s:property value='id'/>" style="margin-left: 2px;vertical-align: middle;overflow: hidden;">&nbsp;&nbsp;<s:property value="titlech"/></a>
+					    						</div>
+											</s:iterator>
+										</div>
+										
+									</div>
+	    	   			    </div>
+	    	   				<div class="downleft2">
+				 			   <div class="b d1 k" style="border-bottom: 1px solid rgb(143, 169, 230);background: rgb(250, 250, 250)" align="center">
+									<div id="kslj" style="height: 30px;text-align: left;line-height:30px;background: rgb(224, 230, 240);padding-left: 10px">
+									 	友情链接<img src="images/jt.png" id="jtar" class="jta" style="display: normal;display: inline;" onclick="nextlink();"/><img src="images/jtl.png" id="jtal" class="jta" style="display: none;" onclick="prevlink();"/>
+							        </div>
+									<div class="link">
+										<s:iterator value="links">
+											<a href="<s:property value='url'/>" target="blank"><s:property value='linknamech'/></a>	
+										</s:iterator>
+									</div>
+								</div>
+	    	   			    </div>
+  </body>
+</html>
